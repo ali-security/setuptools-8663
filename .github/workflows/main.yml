@@ -40,7 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: MatteoH2O1999/setup-python@v1
         with:
           python-version: ${{ matrix.python }}${{ matrix.dev }}
       - uses: actions/cache@v3
@@ -130,7 +130,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install build-essential gfortran libopenblas-dev
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: MatteoH2O1999/setup-python@v1
         with:
           # Use a release that is not very new but still have a long life:
           python-version: "3.8"
@@ -151,7 +151,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: MatteoH2O1999/setup-python@v1
         with:
           python-version: 3.11-dev
       - name: Install tox
